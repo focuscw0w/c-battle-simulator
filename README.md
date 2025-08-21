@@ -53,8 +53,6 @@ The battle proceeds in rounds, where each army attacks the other. Units lose hea
 - `Goblin Dagger Shield` → Unit named *Goblin* with items *Dagger* and *Shield*.
 
 ### Example Output
-...
-
 Army 1
     Unit: 0
     Name: Warrior
