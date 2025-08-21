@@ -32,3 +32,65 @@ The battle proceeds in rounds, where each army attacks the other. Units lose hea
      - `item1` → mandatory item (must exist in the database)
      - `item2` → optional second item (must exist in the database, total slots ≤ 2)
 3. Repeat the same format for **Army 2**.
+   
+### Running the Program
+1. Compile the program:
+   ```bash
+   gcc main.c -o battle_sim
+2. Run the program:
+   ./battle_sim [max_rounds]
+   [max_rounds] is optional:
+  - `0` → only print armies (no battle simulation).
+  - Positive number `N` → simulate up to **N rounds**.
+  - If omitted → battle continues until one army is defeated.
+
+### Example Input
+- First line `2` → Army 1 has 2 units.
+- `Warrior Sword Shield` → Unit named *Warrior* with items *Sword* and *Shield*.
+- `Archer Bow` → Unit named *Archer* with item *Bow*.
+- Next line `2` → Army 2 has 2 units.
+- `Orc Axe` → Unit named *Orc* with item *Axe*.
+- `Goblin Dagger Shield` → Unit named *Goblin* with items *Dagger* and *Shield*.
+
+### Example Output
+...
+
+Army 1
+    Unit: 0
+    Name: Warrior
+    HP: 100
+    Item 1: Sword,10,2,1,1,0
+    Item 2: Shield,0,5,1,0,0
+
+    Unit: 1
+    Name: Archer
+    HP: 100
+    Item 1: Bow,8,1,1,3,0
+
+Army 2
+    Unit: 0
+    Name: Orc
+    HP: 100
+    Item 1: Axe,12,1,1,1,0
+
+    Unit: 1
+    Name: Goblin
+    HP: 100
+    Item 1: Dagger,5,0,1,1,0
+    Item 2: Shield,0,5,1,0,0
+
+Round 1
+1: Warrior,100 Archer,100 
+2: Orc,100 Goblin,100 
+1,Warrior,Sword:        [Orc,7]
+1,Archer,Bow:        [Orc,7]
+2,Orc,Axe:        [Warrior,10]
+2,Goblin,Dagger:        [Warrior,1] 
+
+1: Warrior,89 Archer,100 
+2: Orc,86 Goblin,100 
+
+...
+WINNER: 1
+
+...
