@@ -36,7 +36,7 @@ The battle proceeds in rounds, where each army attacks the other. Units lose hea
 ### Running the Program
 1. Compile the program:
    ```bash
-   gcc main.c -o battle_sim
+   gcc filename.c -o battle_sim
 2. Run the program:
    ./battle_sim [max_rounds]
    [max_rounds] is optional:
