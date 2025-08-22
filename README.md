@@ -1,11 +1,11 @@
 # Battle Simulator in C
 
-### Overview
+## Overview
 This project is a simple battle simulator implemented in C. Two armies fight against each other, where each unit can be equipped with one or two items from a predefined database. Items have attributes such as attack, defense, slots, range, and radius, which influence the outcome of the battle.
 
 The battle proceeds in rounds, where each army attacks the other. Units lose health points (HP) depending on the damage dealt by their opponents’ items. The battle ends when one (or both) armies are destroyed, or when a maximum number of rounds is reached.
 
-### Features
+## Features
 - Armies consist of **1–5 units**.
 - Units start with **100 HP** and can hold up to **2 items** (if slot restrictions allow).
 - Items are predefined in the database (`items` array) and provide **attack** and **defense** values.
@@ -24,7 +24,7 @@ The battle proceeds in rounds, where each army attacks the other. Units lose hea
   - **Winner: Army 2**
   - **No Winner** (if both armies are destroyed at the same time)
 
-### Input Format
+## Input Format
 1. First line: number of units in **Army 1** (between 1 and 5).
 2. Following lines: each unit is defined as:
    - `<unit_name> <item1> [item2]`
@@ -33,7 +33,7 @@ The battle proceeds in rounds, where each army attacks the other. Units lose hea
      - `item2` → optional second item (must exist in the database, total slots ≤ 2)
 3. Repeat the same format for **Army 2**.
    
-### Running the Program
+## Running the Program
 1. Compile the program:
    ```bash
    gcc filename.c -o battle_sim
@@ -44,7 +44,7 @@ The battle proceeds in rounds, where each army attacks the other. Units lose hea
   - Positive number `N` → simulate up to **N rounds**.
   - If omitted → battle continues until one army is defeated.
 
-### Example Input
+## Example Input
 - First line `2` → Army 1 has 2 units.
 - `Warrior Sword Shield` → Unit named *Warrior* with items *Sword* and *Shield*.
 - `Archer Bow` → Unit named *Archer* with item *Bow*.
@@ -52,7 +52,7 @@ The battle proceeds in rounds, where each army attacks the other. Units lose hea
 - `Orc Axe` → Unit named *Orc* with item *Axe*.
 - `Goblin Dagger Shield` → Unit named *Goblin* with items *Dagger* and *Shield*.
 
-### Example Output
+## Example Output
 Army 1
     Unit: 0
     Name: Warrior
