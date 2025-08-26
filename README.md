@@ -84,7 +84,7 @@ Round 1
 1,Archer,Bow:        [Orc,7]
 2,Orc,Axe:        [Warrior,10]
 2,Goblin,Dagger:        [Warrior,1] 
-
+...
 1: Warrior,89 Archer,100 
 2: Orc,86 Goblin,100 
 
